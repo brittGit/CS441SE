@@ -1,0 +1,83 @@
+.slidecontainer {
+    position: relative;
+    top: 90px;
+    width: 800px;
+}
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 50px; /* Specified height */
+    background: linear-gradient(90deg,  rgb(43, 184, 15) 50%, #f11818 50%); /*background half half*/
+    outline: none; /* Remove outline */
+   /* background-color:red;
+    background-position:left;
+    background-repeat:no-repeat;
+    background-size:10px;*/
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 50px; /* Slider handle height */
+    background: rgb(139, 139, 139); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.left-dot {
+    position: relative;
+    right: 5px;
+    top: 0px;
+    height: 130px;
+    width: 130px;
+    background-color:  rgb(43, 184, 15);
+    border-radius: 50%;
+    display: inline-block;
+    z-index: 1;
+  }
+
+  .right-dot {
+    position: relative;
+    top: 0px;
+    left: 600px;
+    height: 130px;
+    width: 130px;
+    background-color: #f11818;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    z-index: 1;
+  }  
+
+  .yes{
+    position: relative;
+    bottom: 120px;
+    right: 5px;
+    height: 130px;
+    width: 130px;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    z-index: 1;
+  }
+
+  .no{
+    position: relative;
+    bottom: 250px;
+    left: 730px;
+    height: 130px;
+    width: 130px;
+    color: rgb(255, 255, 255);
+    font-size: 55px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    z-index: 1;
+  }
+
+  
