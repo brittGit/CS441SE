@@ -1,0 +1,141 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  --height: 35px;
+  --trackWidth: 400px;
+  --thumbWidth: 30px;
+  --thumbColor: gray;
+  --leftColor: rgb(0, 173, 0);
+  --rightColor: red;
+  --sliderEndSize: 100px;
+  --sliderNudge: 3px;
+  --sliderColor: white;
+}
+
+input[type="range"] {
+  margin: auto;
+  -webkit-appearance: none;
+  position: relative;
+  overflow: hidden;
+  height: var(--height);
+  width: var(--trackWidth);
+  cursor: pointer;
+  border-radius: 0;
+  z-index: 1;
+  outline: none; /* I don't recommend this for accessibility reasons */
+}
+
+::-webkit-slider-runnable-track {
+  background: var(--rightColor);
+}
+
+::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: var(--thumbWidth);
+  height: var(--height);
+  background: var(--thumbColor);
+  box-shadow: -100vw 0 0 100vw var(--leftColor);
+  border: none;
+}
+
+::-moz-range-track {
+  height: var(--height);
+  background: var(--rightColor);
+}
+
+::-moz-range-thumb {
+  background: var(--thumbColor);
+  height: var(--height);
+  width: var(--thumbWidth);
+  border: none;
+  border-radius: 0 !important;
+  box-shadow: -100vw 0 0 100vw var(--leftColor);
+  box-sizing: border-box;
+}
+
+::-ms-fill-lower {
+  background: var(--leftColor);
+}
+
+::-ms-thumb {
+  background: var(--thumbColor);
+  border: none;
+  height: var(--height);
+  width: var(--thumbWidth);
+  box-sizing: border-box;
+}
+
+::-ms-ticks-after {
+  display: none;
+}
+
+::-ms-ticks-before {
+  display: none;
+}
+
+::-ms-track {
+  background: var(--rightColor);
+  color: transparent;
+  height: var(--height);
+  border: none;
+}
+
+::-ms-tooltip {
+  display: none;
+}
+
+#sliderWrapper {
+  display: flex;
+  position: relative;
+}
+
+.sliderEnd {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--sliderEndSize);
+  height: var(--sliderEndSize);
+  border-radius: 50%;
+  z-index: 0;
+  color: var(--sliderColor);
+  font-family: "Pacifico", cursive;
+  font-size: 40px;
+}
+
+#sliderLeft {
+  background-color: var(--leftColor);
+  left: var(--sliderNudge);
+}
+
+#sliderRight {
+  background-color: var(--rightColor);
+  right: var(--sliderNudge);
+}
+
+.sliderValue {
+  font-family: sans-serif;
+}
+
+.sliderInfo {
+  font-family: "Pacifico", cursive;
+  color: var(--sliderColor);
+  position: absolute;
+  z-index: 1;
+  top: 26px;
+  pointer-events: none; /* this lets you click through the text to the thumb */
+  font-size: 24px;
+}
+
+#sliderInfoLeft {
+  left: calc(var(--sliderEndSize) + 20px);
+}
+
+#sliderInfoRight {
+  right: calc(var(--sliderEndSize) + 20px);
+}
