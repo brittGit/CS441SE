@@ -23,6 +23,15 @@ const sliderPercent = document.getElementById("sliderPercent");
 const sliderInfoYes = document.getElementById("sliderInfoLeft");
 const sliderInfoNo = document.getElementById("sliderInfoRight");
 
+const formInput = document.querySelector('#form__input');
+const formYes = document.querySelector('.form__yes');
+const formNo = document.querySelector('.form__no');
+const sliderState = {
+  input: '',
+  yes: 0,
+  no: 0,
+};
+
 /*
   Below we declare some useful functions that we'll compose
   to get values and set displays
@@ -77,14 +86,67 @@ setCurrentValue(slider, sliderCurrentValue);
 setYesNo(slider, sliderPercent);
 setSliderInfo(slider, sliderInfoYes, sliderInfoNo);
 
-// listen for when the user slides the thumb
-slider.addEventListener("input", function(e) {
-  setCurrentValue(e.currentTarget, sliderCurrentValue);
-  setYesNo(e.currentTarget, sliderPercent);
-  setSliderInfo(e.currentTarget, sliderInfoYes, sliderInfoNo);
-});
+// // listen for when the user slides the thumb
+// slider.addEventListener("input", function(e) {
+//   setCurrentValue(e.currentTarget, sliderCurrentValue);
+//   setYesNo(e.currentTarget, sliderPercent);
+//   setSliderInfo(e.currentTarget, sliderInfoYes, sliderInfoNo);
+// });
 
 // listen for when the user releases the thumb
 slider.addEventListener("change", function(e) {
-  setValue(e.currentTarget, sliderValue);
+  slider.value = slider.value;
+});
+
+// Handle The FORM
+formInput.addEventListener('change', function (e) {
+  sliderState.input = e.target.value;
+});
+
+function applySliderState() {
+  const total = sliderState.yes + sliderState.no;
+  const yesPercent = sliderState.yes / total;
+  const value = yesPercent * 100;
+  
+  slider.value = value;
+
+  setValue(slider, sliderValue);
+  setCurrentValue(slider, sliderCurrentValue);
+  setYesNo(slider, sliderPercent);
+  setSliderInfo(slider, sliderInfoYes, sliderInfoNo);
+}
+
+function updateState(yes) {
+  if (formInput.value === '') {
+    return;
+  }
+
+  const value = parseFloat(formInput.value);
+  if (isNaN(value)) {
+    alert(`Bad input: "${formInput.value}". Please enter a number`);
+    return;
+  }
+
+  if (value <= 0) {
+    alert('Please donate greater than zero dollars.');
+    return;
+  }
+
+  if (yes) {
+    sliderState.yes += value;
+  } else {
+    sliderState.no += value;
+  }
+
+  formInput.value = '';
+
+  applySliderState();
+}
+
+formYes.addEventListener('click', function () {
+  updateState(true);
+});
+
+formNo.addEventListener('click', function () {
+  updateState(false);
 });

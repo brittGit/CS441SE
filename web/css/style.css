@@ -4,13 +4,80 @@ body{
     margin:0;
     background-color:#f4f4f4;
   }
+  img { display: block; }
+  /* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* */
+  .slide_in_cont {
+    position: relative;
+    width: 100%;
+  }
   
+  .slide_in_image {
+    -webkit-filter: opacity(75%);
+    filter: opacity(75%);
+    /*border-radius: 50%;*/
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .slide_in_overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #e8491d;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+  }
+  
+  .slide_in_cont:hover .slide_in_overlay {
+    bottom: 0;
+    height: 100%;
+  }
+  
+  .slide_in_overlay_gray {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #34524a;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+  }
+  
+  .slide_in_cont:hover .slide_in_overlay_gray {
+    bottom: 0;
+    height: 100%;
+  }
+
+  .slide_in_text {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  /* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* */
   .container{
     width:80%;
     margin:auto;
     overflow:hidden;
   }
-  
+  .container_donation{
+    text-align:center;
+    position:relative;
+    width:60%;
+    margin:auto;
+    overflow:hidden;
+  }
   
   ul{
     margin:0;
@@ -119,6 +186,184 @@ body{
     font-size:20px;
   }
 
+
+
+/* Showcase */
+  /* Showcase is an ID so it is preceeded by a '#'*/
+  #showcase_donation_page{
+    min-height:400px;
+    text-align:center;
+    /*background:url('../img/test.jpg') no-repeat 0 -500px;*/
+    color:#ffffff;
+  }
+
+  #showcase_donation_page:before{
+    /* image */
+    left: 0;
+    right: 0;
+    margin-left:auto;
+    margin-right:auto;
+    content: "";
+    position: absolute;
+    height: 367px;
+    width: 556px;
+    background:url('../img/paul_ryan.png') no-repeat 0 0;
+    background-size: cover;
+    z-index: -1;
+    -webkit-filter: opacity(100%);
+    filter: opacity(100%);
+  }
+
+  #showcase_donation_page h1{
+    margin-top:100px;
+    font-size:55px;
+    margin-bottom:10px;
+  }
+
+  #showcase_donation_page p{
+    font-size:20px;
+  }
+
+
+
+
+/* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* */
+  /* Showcase REPS PAGE*/
+  /* Showcase REPS PAGEis an ID so it is preceeded by a '#'*/
+  #showcase-reps{
+    height:850px;
+    text-align:center;
+    /*background:url('../img/test.jpg') no-repeat 0 -500px;*/
+    /*color:#ffffff;*/
+  }
+
+  #showcase-reps:before{
+    /* image */
+    left: 0;
+    right: 0;
+    display:block;
+    content: "";
+
+    float: left;
+    height:1250px;
+    width:50%;
+    background:url('../img/feinstein_banner.jpg') no-repeat 0 0px;
+    background-size: cover;
+    z-index: -1;
+    /*-webkit-filter: opacity(50%);
+    filter: opacity(50%);*/
+  }
+
+  #showcase-reps h1{
+    margin-top:100px;
+    font-size:55px;
+    margin-bottom:10px;
+  }
+
+  #showcase-reps p{
+    font-size:20px;
+  }
+/* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* */
+
+
+
+article, aside, figure, footer, header, hgroup, 
+menu, nav, section { display: block; margin: 0; }
+img { display: block; }
+
+.wrap-find-my-reps {
+  overflow: hidden;
+  /*height:1250px;*/
+  width: 100%;
+  /*margin: 0 auto;*/
+}
+
+.tint-find-my-reps {
+  position: relative;
+  /*float: left;*/
+  cursor: pointer;
+  /*box-shadow: rgba(0,0,0,.2) 3px 5px 5px;*/
+}
+
+.tint-find-my-reps:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,255,255, 0.5);
+  transition: all .3s linear;
+}
+
+.tint-find-my-reps:hover:before { background: none; }
+
+.t2-reps:before { background: rgba(232,72,29, 0.8); }
+.t3-reps:before { background: rgba(53,66,74, 0.8); }
+.t4-reps:before { background: rgba(0,255,0, 0.5); }
+.t5-reps:before { background: rgba(255,0,240, 0.5); }
+.t6-reps:before { background: rgba(255,102,0, 0.6); }
+
+ /* Three image containers (use 25% for four, and 50% for two, etc) */
+ .column-find-my-reps {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after image containers */
+.row-find-my-reps::after {
+  content: "";
+  clear: both;
+  display: table;
+} 
+
+
+
+
+
+/* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* */
+  /* Showcase OTHER REPS PAGE*/
+  /* Showcase OTHER REPS PAGEis an ID so it is preceeded by a '#'*/
+  #showcase-other-reps{
+    height:850px;
+    text-align:center;
+    /*background:url('../img/test.jpg') no-repeat 0 -500px;*/
+    color:#ffffff;
+  }
+
+  #showcase-other-reps:before{
+    /* image */
+    left: 0;
+    right: 0;
+   /* margin-left:auto;
+    margin-right:auto; */
+    content: "";
+    /*position: absolute; */
+    float: right;
+    height:1250px;
+    width:50%;
+    background:url('../img/peters_banner.jpg') no-repeat 0px -100px;
+    background-size: cover;
+    z-index: -1;
+    /*-webkit-filter: opacity(100%);
+    filter: opacity(100%);*/
+  }
+
+  #showcase-other-reps h1{
+    margin-top:100px;
+    font-size:55px;
+    margin-bottom:10px;
+  }
+
+  #showcase-other-reps p{
+    font-size:20px;
+  }
+
+/* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* */
+
+
+
   #newsletter{
     padding:15px;
     color:#ffffff;
@@ -140,6 +385,30 @@ body{
     width:250px
   }
 
+
+  #newsletter_donations{
+    padding:15px;
+    color:#ffffff;
+    background:#ffffff;
+  }
+
+  #newsletter_donations h1{
+    float:left;
+  }
+
+  #newsletter_donations form {
+    float:right;
+    margin-top:15px;
+  }
+  
+  #newsletter_donations input[type="email"] {
+    padding:4px;
+    height:25px;
+    width:250px
+  }
+
+
+
   #boxes {
     margin-top:20px;
   }
@@ -153,23 +422,42 @@ body{
 
   #boxes .box img{
     width:90px;
+    
+  }
+  
+  /* */
+  #boxes .paul_portrait img{
+    width:200px;
+  }
+  /* */
+
+  #boxes .box_reps {
+    float:left;
+    text-align:center;
+    width:30%;
+    padding:10px;
+  }
+
+  #boxes .box_reps img{
+    width:350px;
+    /*border-radius: 50%;*/
   }
 
   /*sidebar*/
   aside#sidebar{
-    float:right;
+    float:left;
     width:30%;
     margin-top:10px;
   }
 
   aside#sidebar .quote input, aside#sidebar .quote textarea{
-    width:90%;
+    width:50%;
     padding:5px;
   }
 
   /*Mai-col*/
   article#main-col{
-    float:left;
+    float:right;
     width:65%;
   }
 
@@ -221,3 +509,75 @@ body{
       margin-bottom:5px;
     }
   }
+/* Resizeable buttons for donation amounts */
+  .donate_transition {
+
+    transition: all ease .5s;
+        transition-property: all;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+
+  }
+  .amount-btn {
+
+    background-color:#35424a;
+    padding:5px 15px;
+    border-radius:4px;
+    max-width:102px;
+    width:100%;
+    display:inline-block;
+    margin:0 8px
+
+   }
+   a.amount-btn {
+
+    color:#fff
+
+   }
+   a.amount-btn:hover {
+
+    color:#fff
+    
+   }
+   .amount-btn:hover {
+
+    background-color:#e8491d;
+    transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    transition:all ease .3s
+    
+   }
+   /* IMAGE GRID */   /* IMAGE GRID */   /* IMAGE GRID */   /* IMAGE GRID */   /* IMAGE GRID */   /* */   /* */   /* */   /* */   /* */   /* */   /* */   /* */   /* */ 
+   .column {
+    float: left;
+    width: 24%;
+    padding: 8px;
+  }
+  
+  /* Clear floats after image containers */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+/* IMAGE GRID */   /* IMAGE GRID */   /* IMAGE GRID */   /* IMAGE GRID */   /* IMAGE GRID */   /* IMAGE GRID */   /* */   /* */   /* */   /* */   /* */   /* */   /* */   /* */
+.legislation_text_container {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+.legislation_text_centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
