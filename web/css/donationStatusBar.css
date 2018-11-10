@@ -45,6 +45,8 @@
     background-color: var(--noColor);
     box-sizing: border-box;
     z-index: 1;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .donation-status-bar__bar-yes {

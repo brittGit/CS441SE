@@ -9,6 +9,7 @@
     <title>BuyMyVote | Welcome</title>
     <link rel="stylesheet" href = "/css/style.css">
     <link rel="stylesheet" href="/css/donationStatusBar.css" />
+    <script src="/js/DonationStatusBar.js"></script>
   </head>
   <body>
     <header>
