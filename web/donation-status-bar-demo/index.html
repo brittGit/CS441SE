@@ -1,0 +1,59 @@
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="./donationStatusBar.css" />
+    <script src="./DonationStatusBar.js"></script>
+</head>
+
+<body>
+	<div class="donation-status-bar" id="my-donation-status-bar">
+        <div class="donation-status-bar__end donation-status-bar__end--yes">
+            50%
+        </div>
+        <div class="donation-status-bar__bar">
+            <div class="donation-status-bar__bar-yes"></div>
+        </div>
+        <div class="donation-status-bar__end donation-status-bar__end--no">
+            50%
+        </div>
+    </div>
+    <div class="log">
+
+    </div>
+    <script>
+        const donationStatusBar = new DonationStatusBar(document.querySelector('#my-donation-status-bar'));
+        const log = document.querySelector('.log');
+        const maxDonation = 1000;
+        const minDonation = 42;
+        const minTime = 1000;
+        const maxTime = 3000;
+        let numberOfDonations = 42;
+
+        const randomRange = (min, max) => min + Math.random() * (max - min);
+
+        const simulateDonation = () => {
+            const donation = randomRange(minDonation, maxDonation);
+            const donateTo = Math.random() > 0.5 ? DonationStatusBar.YES : DonationStatusBar.NO;
+
+            donationStatusBar.donate(donation, donateTo);
+
+            const logEntry = document.createElement('div');
+            logEntry.className = 'log__entry';
+            logEntry.innerHTML = `Received donation: $${donation.toFixed(2)} for ${donateTo ? 'YES' : 'NO'}`;
+            log.insertBefore(logEntry, log.firstChild);
+        
+
+            numberOfDonations--;
+            if (numberOfDonations > 0) {
+                setTimeout(simulateDonation, randomRange(minTime, maxTime));
+            }
+
+            
+        }
+
+        simulateDonation();
+    </script>
+</body>
+
+</html>
