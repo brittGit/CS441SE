@@ -207,7 +207,7 @@ body{
     position: absolute;
     height: 367px;
     width: 556px;
-    background:url('../img/paul_ryan.png') no-repeat 0 0;
+    /* background:url('../img/paul_ryan.png') no-repeat 0 0; */
     background-size: cover;
     z-index: -1;
     -webkit-filter: opacity(100%);

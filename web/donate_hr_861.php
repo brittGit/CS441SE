@@ -7,7 +7,8 @@
     <meta name = "keyword" content = "web design, affordable web design, professional advice">
     <meta name = "Author" content = "Matt K">
     <title>BuyMyVote | Welcome</title>
-    <link rel="stylesheet" href = "./css/style.css">
+    <link rel="stylesheet" href = "/css/style.css">
+    <link rel="stylesheet" href="/css/donationStatusBar.css" />
   </head>
   <body>
     <header>
@@ -36,6 +37,17 @@
     <section id="showcase_donation_page">
       <div class="container">
         <!--<h1>Affordable, Professional Web Design</h1>-->
+        <div class="donation-status-bar" id="my-donation-status-bar">
+          <div class="donation-status-bar__end donation-status-bar__end--yes">
+              50%
+          </div>
+          <div class="donation-status-bar__bar">
+              <div class="donation-status-bar__bar-yes"></div>
+          </div>
+          <div class="donation-status-bar__end donation-status-bar__end--no">
+              50%
+          </div>
+        </div>
       </div>
     </section>
 
@@ -59,7 +71,32 @@
         </figure>
 
       </div>
+      <script>
+        const donationStatusBar = new DonationStatusBar(document.querySelector('#my-donation-status-bar'));
+        const maxDonation = 1000;
+        const minDonation = 42;
+        const minTime = 1000;
+        const maxTime = 3000;
+        let numberOfDonations = 42;
 
+        const randomRange = (min, max) => min + Math.random() * (max - min);
+
+        const simulateDonation = () => {
+            const donation = randomRange(minDonation, maxDonation);
+            const donateTo = Math.random() > 0.5 ? DonationStatusBar.YES : DonationStatusBar.NO;
+
+            donationStatusBar.donate(donation, donateTo);
+      
+            numberOfDonations--;
+            if (numberOfDonations > 0) {
+                setTimeout(simulateDonation, randomRange(minTime, maxTime));
+            }
+
+            
+        }
+
+        simulateDonation();
+      </script>
       </body>
   </html>
 </DOCTYPE>
