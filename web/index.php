@@ -27,7 +27,7 @@
               }
              if(!isset($_SESSION['loggedIn'])) {
                 echo "<li><a href=\"services.php\">Create An Account</a></li>";
-                echo "<li><a id=\"login_button\">Login</a></li>";
+                echo "<li><a href=\"#\" id=\"login_button\">Login</a></li>";
              }
             ?>
           </ul>
