@@ -26,7 +26,8 @@
                 echo "<li><a href=\"find_my_rep.php\">Find Your Representive</a></li>";
               }
              if(!isset($_SESSION['loggedIn'])) {
-                echo "<li><a href=\"services.php\" id=\"login_button\">Login</a></li>";
+                echo "<li><a href=\"services.php\">Create An Account</a></li>";
+                echo "<li><a id=\"login_button\">Login</a></li>";
              }
             ?>
           </ul>
@@ -77,14 +78,16 @@
       <script>
         const init = () => {
           const login = document.getElementById('login_button');
-          login.addEventListener('click', () => {
-            fetch('/login.php', {
-              credentials: 'same-origin'
-            })
-              .then(() => {
-                window.location.reload();
-              });
-          }, false);
+          if (login) {
+            login.addEventListener('click', () => {
+              fetch('/login.php', {
+                credentials: 'same-origin'
+              })
+                .then(() => {
+                  window.location.reload();
+                });
+            }, false);
+          }
         }
 
         window.addEventListener('load', init);
