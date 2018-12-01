@@ -23,7 +23,7 @@
             <?php
               session_start();
               if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
-                echo "<li><a href=\"find_my_rep.php\">Find My Representative</a></li>";
+                echo "<li><a href=\"find_my_rep.php\" id=\"login_button\">Login</a></li>";
               }
              if(!isset($_SESSION['loggedIn'])) {
                 echo "<li><a href=\"services.php\">Create Your Account</a></li>";
@@ -74,6 +74,19 @@
       <footer>
         <p>BuyMyVote, Copyright &copy; 2018</p>
       </footer>
+      <script>
+        const init = () => {
+          const login = document.getElementById('login_button');
+          login.addEventListener('click', () => {
+            fetch('/login.php')
+              .then(() => {
+                window.location.reload();
+              });
+          }, false);
+        }
+
+        window.addEventListener('load', init);
+      </script>
   </body>
   </html>
 </DOCTYPE>
