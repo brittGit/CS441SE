@@ -23,10 +23,10 @@
             <?php
               session_start();
               if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
-                echo "<li><a href=\"find_my_rep.php\" id=\"login_button\">Login</a></li>";
+                echo "<li><a href=\"find_my_rep.php\">Find Your Representive</a></li>";
               }
              if(!isset($_SESSION['loggedIn'])) {
-                echo "<li><a href=\"services.php\">Create Your Account</a></li>";
+                echo "<li><a href=\"services.php\" id=\"login_button\">Login</a></li>";
              }
             ?>
           </ul>
