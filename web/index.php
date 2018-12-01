@@ -78,7 +78,9 @@
         const init = () => {
           const login = document.getElementById('login_button');
           login.addEventListener('click', () => {
-            fetch('/login.php')
+            fetch('/login.php', {
+              credentials: 'same-origin'
+            })
               .then(() => {
                 window.location.reload();
               });
