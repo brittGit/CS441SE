@@ -195,6 +195,9 @@ body{
     text-align:center;
     /*background:url('../img/test.jpg') no-repeat 0 -500px;*/
     color:#ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   #showcase_donation_page:before{
