@@ -46,9 +46,9 @@
       <a class = "amount-btn transition" target ="_blank">$100</a>
       <a class = "amount-btn transition" target ="_blank">$2,147,483,647</a>
       <a class = "amount-btn transition" target ="_blank">Money</a>
-        <!--<h1>Affordable, Professional Web Design</h1>-->
         <h1>Make a Difference You Can Measure</h1>
-        <p>Lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae</p>
+        <!--<p>Lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae</p> -->
+            <p>Pay your taxes? Know all the words to the national anthem? Tired of the back-alley politics controling the way your country is run? Here's your chance. Take back the reigns from private interests. Don't let dark money steal the food from your baby's mouth. Take back what's yours.</p>
       </div>
       </section>
 
@@ -66,8 +66,8 @@
                 </div>
             </div>
             <h3>Change the World</h3>
-              <p>Lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae</p>
-            
+            <!--  <p>Lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae lorem ipsum dolor sit amet, consectet domonae</p> -->
+                  <p>Your donations will pave the way for a drastic change in the political system. No more grassroots campaigns for singular, ineffective candidates alone. Now we can pool our resources as citizens of this country in order to change legislation directly. No longer will we be passengers in our own vehicles!</p>
             </div>
           <div class="box">
             

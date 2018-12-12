@@ -4,19 +4,19 @@
 <header>
       <div class="container">
         <div id="branding">
-          <h1><span class="highlight">Buy </span>My <span class="highlight1">Vote </span></h1>
+          <h1><font face=bookman><strong><span class="highlight">Buy</span>My<span class="highlight1">Vote</strong></font></span></h1>
         </div>
         <nav>
           <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="about.php">About</a></li>
+            <li><a href="index.php"><font face=bookman><strong>Home</strong></font></a></li>
+            <li><a href="about.php"><font face=bookman><strong>About</strong></font></a></li>
             <?php
               session_start();
               if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
-                echo "<li class=\"current\"><a href=\"find_my_rep.php\">Find My Representative</a></li>";
+                echo "<li class=\"current\"><a href=\"find_my_rep.php\"><font face=bookman><strong>Find My Representative</strong></font></a></li>";
               }
               if(!isset($_SESSION['loggedIn'])) {
-                echo "<li class=\"current\"><a href=\"services.php\">Create Your Account</a></li>";
+                echo "<li class=\"current\"><a href=\"services.php\"><font face=bookman><strong>Create Your Account</strong></font></a></li>";
               }
             ?>
           </ul>
@@ -35,7 +35,7 @@
       <!-- <img src="img_snow.jpg" alt="Snow" style="width:100%"> -->
     </div>
     <div class="column-find-my-reps">
-    <a href="find_my_rep_house.php">
+    <a href="find_my_rep_senate.php">
         <figure class="tint-find-my-reps t3-reps">
             <img src="../img/peters_banner.jpg" alt="" width="100%" height="1250px" />
           </figure>

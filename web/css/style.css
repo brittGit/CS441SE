@@ -13,11 +13,18 @@ body{
   
   .slide_in_image {
     -webkit-filter: opacity(75%);
-    filter: opacity(75%);
+    filter: opacity(100%);
     /*border-radius: 50%;*/
     display: block;
-    width: 100%;
-    height: auto;
+    width: 100px;
+    height: 225px;
+    /*position: relative;
+    float: left;
+    width:  100px;
+    height: 225px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;*/
   }
   
   .slide_in_overlay {
@@ -84,14 +91,47 @@ body{
     padding:0;
   }
 
-  .button_1{
+  /*.button_1{
     height:38px;
     background:#e8491d;
     border:0;
     padding-left: 20px;
     padding-right: 20px;
     color:#ffffff;
-  }
+  }*/
+  .amount-button_1 {
+
+    background-color:#ffff;
+    padding:5px 15px;
+    border-radius:4px;
+    max-width:102px;
+    width:100%;
+    display:inline-block;
+    /*margin:0 8px;*/
+   }
+   a.amount-button_1 {
+
+    color:#fff
+
+   }
+   a.amount-button_1:hover {
+
+    color:#fff
+    
+   }
+   .amount-button_1:hover {
+
+    background-color:#e8491d;
+    transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    transition:all ease .3s
+    
+   }
+
+
+
+
 
   .dark{
     padding:15px;
@@ -186,12 +226,43 @@ body{
     font-size:20px;
   }
 
+  #showcase_test_1{
+    min-height:400px;
+    text-align:center;
+    /*background:url('../img/test.jpg') no-repeat 0 -500px;*/
+    color:#ffffff;
+  }
 
+  #showcase_test_1:before{
+    /* image */
+    left: 0;
+    right: 0;
+    margin-left:auto;
+    margin-right:auto;
+    content: "";
+    position: absolute;
+    min-height:400px;
+    background:url('../img/feinstein_banner.jpg') no-repeat 0 -500px;
+    background-size: cover;
+    z-index: -1;
+    -webkit-filter: opacity(50%);
+    filter: opacity(50%);
+  }
+
+  #showcase_test_1 h1{
+    margin-top:100px;
+    font-size:55px;
+    margin-bottom:10px;
+  }
+
+  #showcase_test_1 p{
+    font-size:20px;
+  }
 
 /* Showcase */
   /* Showcase is an ID so it is preceeded by a '#'*/
   #showcase_donation_page{
-    min-height:400px;
+    min-height:200px;
     text-align:center;
     /*background:url('../img/test.jpg') no-repeat 0 -500px;*/
     color:#ffffff;
@@ -208,7 +279,7 @@ body{
     margin-right:auto;
     content: "";
     position: absolute;
-    height: 367px;
+    height: 250px;
     width: 556px;
     /* background:url('../img/paul_ryan.png') no-repeat 0 0; */
     background-size: cover;
@@ -218,9 +289,9 @@ body{
   }
 
   #showcase_donation_page h1{
-    margin-top:100px;
+    margin-top:10px;
     font-size:55px;
-    margin-bottom:10px;
+    margin-bottom:0px;
   }
 
   #showcase_donation_page p{
@@ -382,7 +453,7 @@ img { display: block; }
     margin-top:15px;
   }
   
-  #newsletter input[type="email"] {
+  #newsletter input[type="zipcode"] {
     padding:4px;
     height:25px;
     width:250px
@@ -410,7 +481,12 @@ img { display: block; }
     width:250px
   }
 
-
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
   #boxes {
     margin-top:20px;
@@ -583,4 +659,14 @@ img { display: block; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.donation_image_styling {
+  position: relative;
+  float: left;
+  width:  100px;
+  height: 225px;
+  background-position: 50% 50%;
+  background-repeat:   no-repeat;
+  background-size:     cover;
 }

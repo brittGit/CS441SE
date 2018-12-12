@@ -16,26 +16,30 @@
     <header>
       <div class="container"> <!-- <a href="index.php"> -->
         <div id="branding">
-          <h1><span class="highlight">Buy </span>My <span class="highlight1">Vote </span></h1>
+          <h1><font face=bookman><strong><span class="highlight">Buy</span>My<span class="highlight1">Vote</span></strong></font></h1>
         </div>
         <nav>
           <ul>
-          <li><a href="index.php">Home</a></li>
-            <li><a href="about.php">About</a></li>
+          <li><a href="index.php"><font face=bookman><strong>Home</strong></font></a></li>
+            <li><a href="about.php"><font face=bookman><strong>About</strong></font></a></li>
             <?php
               session_start();
               if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
-                echo "<li class=\"current\"><a href=\"find_my_rep.php\">Find My Representative</a></li>";
+                echo "<li class=\"current\"><a href=\"find_my_rep.php\"><font face=bookman><strong>Find My Representative</strong></font></a></li>";
               }
               if(!isset($_SESSION['loggedIn'])) {
-                echo "<li class=\"current\"><a href=\"services.php\">Create Your Account</a></li>";
+                echo "<li class=\"current\"><a href=\"services.php\"><font face=bookman><strong>Create Your Account</strong></font></a></li>";
               }
             ?>
           </ul>
         </nav>
       </div>
     </header>
-    
+    <section id="showcase_test_1">
+      <div class="container">
+        <h1><font face="bookman"><strong>H.R. 861</strong></font></h1>
+      </div>
+    </section>
     <section id="showcase_donation_page">
       <div class="container">
         <!--<h1>Affordable, Professional Web Design</h1>-->
@@ -61,11 +65,11 @@
 
 
   <div class="container_donation">
-  <a class = "amount-btn transition" target ="_blank" data-money-value="25">$25</a>
-  <a class = "amount-btn transition" target ="_blank" data-money-value="50">$50</a>
+  <a class = "amount-btn transition" target ="_blank" data-money-value="25"><font face="bookman"><strong>Custom Donation</strong></font></a>
+  <!--<a class = "amount-btn transition" target ="_blank" data-money-value="50">$50</a>
   <a class = "amount-btn transition" target ="_blank" data-money-value="100">$100</a>
   <a class = "amount-btn transition" target ="_blank" data-money-value="2147483647">$2,147,483,647</a>
-  <a class = "amount-btn transition" target ="_blank" data-money-value="">Other Amount</a>
+  <a class = "amount-btn transition" target ="_blank" data-money-value="">Other Amount</a>             -->
     <!--<h1>Affordable, Professional Web Design</h1>-->
   </div>
 
