@@ -1,0 +1,31 @@
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="./src/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+</head>
+
+<body>
+	<div>
+		<div class="form">
+			<input type="text" id="form__input" />
+			<button role="button" class="form__yes">Yes</button>
+			<button role="button" class="form__no">No</button>
+		</div>
+	</div>
+	<div id="sliderWrapper">
+		<div id="sliderLeft" class="sliderEnd">Yes</div>
+		<input id="slider" type="range" min="0" max="100" value="50" step="1" />
+		<div id="sliderRight" class="sliderEnd">No</div>
+
+		<div id="sliderInfoLeft" class="sliderInfo">test</div>
+		<div id="sliderInfoRight" class="sliderInfo">test</div>
+	</div>
+	<div id="sliderValue" class="sliderValue"></div>
+	<div id="sliderCurrentValue" class="sliderValue"></div>
+	<div id="sliderPercent" class="sliderValue"></div>
+	<script src="src/index.js"></script>
+</body>
+
+</html>

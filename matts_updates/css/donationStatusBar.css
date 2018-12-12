@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+.donation-status-bar {
+    box-sizing: border-box;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    --barHeight: 35px;
+    --yesColor: rgb(0, 173, 0);
+    --noColor: red;
+    --endSize: 100px;
+    --sliderNudge: 3px;
+    --textColor: white;
+}
+
+.donation-status-bar__end {
+    width: var(--endSize);
+    height: var(--endSize);
+    border-radius: 50%;
+    z-index: 0;
+    color: var(--textColor);
+    font-family: 'Pacifico', cursive;
+    font-size: calc(var(--endSize) * 0.333);
+    text-align: center;
+    line-height: var(--endSize);
+    z-index: 10;
+}
+
+
+.donation-status-bar__end--yes {
+    background-color: var(--yesColor);
+    margin-right: -8px;
+}
+
+.donation-status-bar__end--no {
+    background-color: var(--noColor);
+    margin-left: -8px;
+}
+
+.donation-status-bar__bar {
+    height: var(--barHeight);
+    flex: 1;
+    background-color: var(--noColor);
+    box-sizing: border-box;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.donation-status-bar__bar-yes {
+    height: 100%;
+    display: inline-block;
+    width: 50%;
+    background-color: var(--yesColor);
+    transition: width 500ms ease-in-out;
+}
